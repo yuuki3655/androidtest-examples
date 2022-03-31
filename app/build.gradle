@@ -34,21 +34,25 @@ android {
     }
 
     testOptions {
-        devices {
-            pixel3Api28 (ManagedVirtualDevice) {
-                device = "Pixel 3"
-                apiLevel = 28
-                systemImageSource = "aosp"
-            }
-            pixel3Api30 (ManagedVirtualDevice) {
-                device = "Pixel 3"
-                apiLevel = 30
-                systemImageSource = "aosp"
-            }
-            pixel3api30Atd (ManagedVirtualDevice) {
-                device = "Pixel 3"
-                apiLevel = 30
-                systemImageSource = "aosp-atd"
+        managedDevices {
+            devices {
+                device1 (com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = "Pixel 2 XL"
+                    apiLevel = 32
+                    systemImageSource = "google"
+                }
+ 
+                device2 (com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = "Pixel 3"
+                    apiLevel = 31
+                    systemImageSource = "google"
+                }
+ 
+                device3 (com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = "Pixel 4a"
+                    apiLevel = 31
+                    systemImageSource = "google"
+                }
             }
         }
     }
